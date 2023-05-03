@@ -17,7 +17,7 @@ function Register() {
   const [values, setValues] = useState(initialState);
 
   // global context and useNavigate later
-  const { isLoading, showAlert, displayAlert, clearAlert } = useAppContext();
+  const { isLoading, showAlert, displayAlert, registerUser } = useAppContext();
 
   // console.log(state);
   const toggleMember = () => {
@@ -35,6 +35,10 @@ function Register() {
       displayAlert();
       return;
     }
+    const currentUser = {
+      name, email, password
+    }
+    console.log(values)
   };
 
   return (
